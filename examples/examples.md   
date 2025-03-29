@@ -1,0 +1,97 @@
+# Model Activation Visualizer (MAV) Examples
+
+This file contains examples for using MAV with different models and prompts.
+
+## Basic Usage
+
+```bash
+# Basic usage with default parameters
+./mav --model /path/to/model.gguf --prompt "Once upon a time"
+```
+
+## Customizing Generation Parameters
+
+```bash
+# Using temperature to control randomness
+./mav --model /path/to/model.gguf --prompt "The future of AI is" --temp 0.7
+
+# Using top-k sampling
+./mav --model /path/to/model.gguf --prompt "Write a poem about" --top-k 20
+
+# Using top-p (nucleus) sampling
+./mav --model /path/to/model.gguf --prompt "The best way to learn is" --top-p 0.9
+
+# Combining sampling methods
+./mav --model /path/to/model.gguf --prompt "In the year 2050" --temp 0.8 --top-k 40 --top-p 0.95
+
+# With repetition penalty to reduce word repetition
+./mav --model /path/to/model.gguf --prompt "List five reasons why" --repetition-penalty 1.2
+```
+
+## Interactive Mode
+
+```bash
+# Interactive mode (press Enter to generate each token, 'q' to quit)
+./mav --model /path/to/model.gguf --prompt "Let me tell you a story" --interactive
+```
+
+## Visualization Settings
+
+```bash
+# Using different scaling for visualizations
+./mav --model /path/to/model.gguf --prompt "Analyze this problem:" --scale log
+
+# Limiting displayed characters
+./mav --model /path/to/model.gguf --prompt "This is a long prompt that will be truncated" --limit-chars 100
+```
+
+## Creative Writing Examples
+
+```bash
+# Story prompts
+./mav --model /path/to/model.gguf --prompt "The dragon emerged from the cave, its scales"
+
+# Poetry prompts
+./mav --model /path/to/model.gguf --prompt "Roses are red, violets are"
+
+# Dialog prompts
+./mav --model /path/to/model.gguf --prompt "Alice: Hi, how are you?\nBob:"
+```
+
+## Technical Writing Examples
+
+```bash
+# Code completion
+./mav --model /path/to/model.gguf --prompt "def fibonacci(n):"
+
+# Technical explanation
+./mav --model /path/to/model.gguf --prompt "Explain how transformers work:"
+
+# Problem solving
+./mav --model /path/to/model.gguf --prompt "To solve this differential equation, we first"
+```
+
+## Using with Different Models
+
+```bash
+# With Llama 2
+./mav --model /path/to/llama-2-7b.gguf --prompt "Explain quantum computing"
+
+# With GPT-J
+./mav --model /path/to/gptj-6b.gguf --prompt "Write a function to sort an array"
+
+# With other model types
+./mav --model /path/to/custom-model.gguf --prompt "Your prompt here"
+```
+
+## Advanced Settings
+
+```bash
+# Setting a specific random seed for reproducibility
+./mav --model /path/to/model.gguf --prompt "This will generate the same output" --seed 42
+
+# With verbose output for debugging
+./mav --model /path/to/model.gguf --prompt "Show me the details" --verbose
+```
+
+Feel free to experiment with different combinations of parameters to observe how they affect the model's internal activations and generation behavior!
