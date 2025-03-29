@@ -5,9 +5,9 @@ CFLAGS = -Wall -Wextra -O2 -std=c11 -D_DEFAULT_SOURCE
 LDFLAGS = -lm -lpthread
 
 # GGML/llama.cpp paths - adjust these to match your setup
-GGML_DIR = ../llama.cpp
+GGML_DIR = ../../llama.cpp
 INCLUDE_DIRS = -I$(GGML_DIR)
-LIB_DIRS = -L$(GGML_DIR)
+LIB_DIRS = -L$(GGML_DIR)/build
 LIBS = -lggml -lllama
 
 # Source files
